@@ -1,0 +1,95 @@
+composition:
+  _name: Home
+  _id: debec9d6-af1f-4d5d-b560-bae8aeb75ad7
+  _slug: ':locale'
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      locales:
+        en-US: This is our awesome page title
+  slots:
+    content:
+      - _id: 6c28695c-f40e-4b5d-9748-fc2ade4c1c8c
+        type: hero
+        parameters:
+          image:
+            type: asset
+            locales:
+              en-US:
+                - _id: 667b29c3-75b6-4ca3-aab8-e08c65631959
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 08f971cc-436d-4b80-a929-e82d220b1b23
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/wTt5BUWzRyORyYawlus1pA/07lfEdPQRByDA08jG076SA-Screenshot-2024-06-06-at-13.13.11.png
+                      type: text
+                    file:
+                      type: file
+                      value: 42dcf77c-a09a-4ca8-b360-fb1660b7e01c
+                    size:
+                      value: 33884
+                      type: number
+                    title:
+                      type: text
+                      value: Screenshot-2024-06-06-at-13.13.11.png
+                    width:
+                      value: 730
+                      type: number
+                    height:
+                      value: 488
+                      type: number
+                    mediaType:
+                      value: image/png
+                      type: text
+                  _source: uniform-assets
+          title:
+            type: text
+            locales:
+              en-US: Giegbjigurwjhgrugrhegve it a title
+          description:
+            type: richText
+            locales:
+              en-US:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Let''s add some '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: rich
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ' text'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                  direction: ltr
+  _locales:
+    - en-US
+created: '2024-06-07T09:08:40.864624+00:00'
+modified: '2024-06-07T09:30:25.681005+00:00'
+pattern: false

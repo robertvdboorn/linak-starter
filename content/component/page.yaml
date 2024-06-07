@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: page
+name: Page
+icon: file-document
+parameters:
+  - id: pageTitle
+    name: Page Title
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents:
+      - hero
+      - feature
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: pageTitle
+canBeComposition: true
+created: '2024-06-07T09:08:03.753069+00:00'
+updated: '2024-06-07T09:26:20.180881+00:00'
