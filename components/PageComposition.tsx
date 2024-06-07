@@ -2,14 +2,21 @@ import React from "react";
 import Head from "next/head";
 import Footer from "./Footer";
 import Link from "next/link";
-import Hero from "./Hero";
+import "../components/canvasComponents";
+import { RootComponentInstance } from "@uniformdev/canvas";
+import { UniformComposition, UniformSlot } from "@uniformdev/canvas-react";
 
-export default function PageComposition() {
-  
+export interface PageCompositionProps {
+  data: RootComponentInstance;
+}
+
+export default function PageComposition({ data }: PageCompositionProps) {
+  const composition = data;
+  const { pageTitle } = composition?.parameters || {};
   return (
     <>
       <Head>
-        <title>Welcome to the demo</title>
+        <title>{pageTitle?.value as string}</title>
       </Head>
       <main className="main">
         <div className="navigation">
@@ -24,10 +31,9 @@ export default function PageComposition() {
             </Link>
           </span>
         </div>
-        <Hero
-          title={"This is an example title"}
-          description={"and this is the description <br> with a new line"}
-        />
+        <UniformComposition data={composition}>
+          <UniformSlot name="content" />
+        </UniformComposition>
         <Footer />
       </main>
     </>

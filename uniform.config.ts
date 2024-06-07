@@ -9,7 +9,7 @@ const config: CLIConfiguration = {
       composition: { publish: true },
       contentType: {},
       component: {},
-      dataType: {},
+      // dataType: {},
       enrichment: {},
       entry: { publish: true },
       locale: {},

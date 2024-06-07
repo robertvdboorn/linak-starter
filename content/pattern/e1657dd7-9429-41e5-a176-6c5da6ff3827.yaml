@@ -1,0 +1,62 @@
+composition:
+  _name: Hero Pattern
+  _id: e1657dd7-9429-41e5-a176-6c5da6ff3827
+  type: hero
+  parameters:
+    image:
+      type: asset
+      locales:
+        en-US:
+          - _id: dea672e7-1452-41cb-bc32-18c399ca4c8d
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Get Pokemon by Name
+                  Content/sprites/other/dream_world/front_default}
+            _source: custom-url
+    title:
+      type: text
+      locales:
+        en-US: My favorite pokemon is ${#jptr:/Get Pokemon by Name Content/name}
+    description:
+      type: richText
+      locales:
+        en-US:
+          root:
+            type: root
+            format: ''
+            indent: 0
+            version: 1
+            children:
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: 'The type is '
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                  - type: variable
+                    version: 1
+                    reference: '#jptr:/Get Pokemon by Name Content/id'
+                direction: ltr
+            direction: ltr
+  _dataResources:
+    Get Pokemon by Name Content:
+      type: getPokemonByName
+      variables: {}
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-US
+created: '2024-06-07T09:32:16.676717+00:00'
+modified: '2024-06-07T09:35:05.182684+00:00'
+pattern: true
